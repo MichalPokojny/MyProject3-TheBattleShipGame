@@ -18,9 +18,9 @@ class Game:
         # Function to populate the board with random locations. 
         
         for i in range(num_ships):
-            self.x, self.y = randint(0, size), randint(0, size)
+            self.x, self.y = randint(0, size - 1), randint(0, size - 1)
             self.board[self.x][self.y] = "@"
-            
+
             return self.board[self.x][self.y]
 
     def print_board(self):
@@ -40,6 +40,5 @@ game_board = Game(size, num_ships)
 game_board.populate_board()
 game_board.print_board()
 
-print(game_board)
 
   
