@@ -55,7 +55,7 @@ class Game_board:
 
 
 def New_game():
-    # Main function to playe the game
+    # Main function to play the game
 
     size = 2
     num_ships = 1
@@ -63,8 +63,14 @@ def New_game():
     game_board = Game_board(size, num_ships)    
     
     game_board.populate_board(size, num_ships)
-    game_board.print_board()
-    game_board.make_guess()
+    
+    x, y = Game_board.make_guess(object)
+    
+    if game_board.board[x][y] == "@":
+        print("Hit!")
+    else:
+        print("Miss!")
+        game_board.print_board()    
 
 
 New_game()
