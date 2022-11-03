@@ -1,7 +1,7 @@
 from random import randint
 
 
-class Game:
+class Game_board:
     """
     Main class game
     """
@@ -14,7 +14,7 @@ class Game:
         self.num_ships = num_ships
         self.board = [["." for x in range(size)] for y in range(size)]
 
-    def populate_board(self):
+    def populate_board(self, size, num_ships):
         # Function to populate the board with random locations. 
         
         for i in range(num_ships):
@@ -58,9 +58,9 @@ def New_game():
     size = 2
     num_ships = 1
 
-    game_board = Game(size, num_ships)    
+    game_board = Game_board(size, num_ships)    
     
-    game_board.populate_board()
+    game_board.populate_board(size, num_ships)
     game_board.print_board()
     game_board.make_guess()
 
