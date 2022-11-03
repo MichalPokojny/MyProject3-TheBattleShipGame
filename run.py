@@ -53,11 +53,16 @@ class Game:
             print("Not a valid input")
             return self.make_guess()        
 
-    
-size = 2
-num_ships = 1
 
-game_board = Game(size, num_ships)
-game_board.populate_board()
-game_board.print_board()
-game_board.make_guess()
+def New_game():
+    size = 2
+    num_ships = 1
+
+    game_board = Game(size, num_ships)    
+    
+    game_board.populate_board()
+    game_board.print_board()
+    game_board.make_guess()
+
+
+New_game()
