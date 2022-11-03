@@ -75,14 +75,12 @@ you have only 3 guesses to get the location of the ship to try to sink it.")
     game_board.populate_board(size, num_ships)
     
     tries = 3
-    hits = 0
     for _ in range(3):
         x, y = Game_board.make_guess(object)
 
         if game_board.board[x][y] == "@":
             print(f"\nHit! Well done {name}. You won!")
             break
-            hits += 1
             tries -= 1
 
         else:
