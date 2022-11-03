@@ -5,7 +5,6 @@ class Game:
     """
     Main class game
     """
-
     def __init__(self, size, num_ships):
         """
         Set attribute for size and number of ships.
@@ -20,8 +19,9 @@ class Game:
         
         for i in range(num_ships):
             self.x, self.y = randint(0, size), randint(0, size)
-
-            return self.board[self.x][self.y] == "@"
+            self.board[self.x][self.y] = "@"
+            
+            return self.board[self.x][self.y]
 
     def print_board(self):
         # Function to print the board with location of the ship
@@ -31,4 +31,15 @@ class Game:
         for row in self.board:
             print(row_number, " ".join(row))
             row_number += 1
-        
+
+    
+size = 2
+num_ships = 1
+
+game_board = Game(size, num_ships)
+game_board.populate_board()
+game_board.print_board()
+
+print(game_board)
+
+  
