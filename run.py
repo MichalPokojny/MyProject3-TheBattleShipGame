@@ -26,10 +26,10 @@ class Game_board:
     def print_board(self):
         # Function to print the board with location of the ship
 
-        print(" 0 1")
+        print("    0 1 2 3 4")
         row_number = 0
         for row in self.board:
-            print(row_number, " ".join(row))
+            print("  ", row_number, " ".join(row))
             row_number += 1
 
     def make_guess(self):
@@ -39,7 +39,7 @@ class Game_board:
         """
         try:
             x = input("Enter row number which you want to target.")
-            while x not in '01' or x =="":
+            while x not in '01' or x == "":
                 print("Not valid number for a row, please choose again.")
                 x = input("Enter row number which you want to target.")
 
@@ -57,7 +57,7 @@ class Game_board:
 def New_game():
     # Main function to play the game
 
-    size = 2
+    size = 5
     num_ships = 1
 
     game_board = Game_board(size, num_ships)    
