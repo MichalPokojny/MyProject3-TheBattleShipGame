@@ -35,27 +35,36 @@ class Game_board:
     def make_guess(self):
         """
         Function for asking the location from the user
-        Function also include try, exept methods to catch error for invalid inputs
+        Function also include try, exept methods to catch error for invalid 
+        inputs
         """
         try:
             x = input("Enter row number which you want to target.")
-            while x not in '01' or x == "":
-                print("Not valid number for a row, please choose again.")
+            while x not in '01234' or x == "":
+                print("Not valid number for a row, please choose again.\n")
                 x = input("Enter row number which you want to target.")
 
             y = input("Enter column number which you want to target.")
-            while y not in '01' or y == "":
+            while y not in '01234' or y == "":
                 print("Not a valid number for a column, please choose again.")
                 y = input("Enter column number which you want to target.")
 
             return int(x), int(y)
         except ValueError:
-            print("Not a valid input")
+            print("Not a valid input.Try again.\n")
             return self.make_guess()        
 
 
 def New_game():
     # Main function to play the game
+    name = input("Hi! What's your name?\n")
+    print(f"\nWelcome {name} to the Ultimate Battleship game!")
+    print("---------------------------------------------------------------")
+    print("\nThis game is for those who like to play a real quick game,\n\
+you have only one guess to get the location of the ship to try to sink it.")
+    print("You need to select row and column from 0 to 4 only.")
+    print("Good luck!\n")
+    print("---------------------------------------------------------------")
 
     size = 5
     num_ships = 1
