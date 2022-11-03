@@ -55,6 +55,8 @@ class Game_board:
 
 
 def New_game():
+    # Main function to playe the game
+
     size = 2
     num_ships = 1
 
