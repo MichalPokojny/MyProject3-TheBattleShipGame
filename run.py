@@ -32,6 +32,27 @@ class Game:
             print(row_number, " ".join(row))
             row_number += 1
 
+    def make_guess(self):
+        """
+        Function for asking the location from the user
+        Function also include try, exept methods to catch error for invalid inputs
+        """
+        try:
+            x = input("Enter row number which you want to target.")
+            while x not in '01' or x =="":
+                print("Not valid number for a row, please choose again.")
+                x = input("Enter row number which you want to target.")
+
+            y = input("Enter column number which you want to target.")
+            while y not in '01' or y == "":
+                print("Not a valid number for a column, please choose again.")
+                y = input("Enter column number which you want to target.")
+
+            return int(x), int(y)
+        except ValueError:
+            print("Not a valid input")
+            return self.make_guess()        
+
     
 size = 2
 num_ships = 1
@@ -39,6 +60,4 @@ num_ships = 1
 game_board = Game(size, num_ships)
 game_board.populate_board()
 game_board.print_board()
-
-
-  
+game_board.make_guess()
