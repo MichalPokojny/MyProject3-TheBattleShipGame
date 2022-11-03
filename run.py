@@ -75,25 +75,33 @@ you have only 3 guesses to get the location of the ship to try to sink it.")
     game_board.populate_board(size, num_ships)
     
     tries = 3
-    for _ in range(3):
+    while True:
+
         x, y = Game_board.make_guess(object)
 
         if game_board.board[x][y] == "@":
             print(f"\nHit! Well done {name}. You won!")
             break
-            tries -= 1
 
         else:
+            if game_board.board[x][y] == "X":
+                print("Guessed that one already, try different one!")
+                continue
             print("Miss! Try again!")
-            print(f"You have {tries - 1} tries left.")
-            tries -= 1
-            print("-------------------------------------------------------------")
+            game_board.board[x][y] = "X"
+            tries = tries - 1
+            print(f"You have {tries} tries left.")
+            ask_to_continue = input("Continue? If yes, press any key.If not, type n").lower()
+            if ask_to_continue == "n":
+                break
+            elif tries == 0:
+                print("Sorry you lost")
+                print(f"\nMiss! Bad luck {name}, hopefully you can get it next time!")
+                print("Have a look where the ship was located!")
+                game_board.print_board()
+                New_game()
 
-    if tries == 0:
-        print("Sorry you lost")
-        print(f"\nMiss! Bad luck {name}, hopefully you can get it next time!")
-        print("Have a look where the ship was located!")
-        game_board.print_board()
+        print("-------------------------------------------------------------")
     
 
 New_game()
