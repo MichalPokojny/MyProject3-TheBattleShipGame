@@ -57,9 +57,10 @@ class Game_board:
 
 def New_game():
     # Main function to play the game
+    print("---------------------------------------------------------------")
     name = input("Hi! What's your name?\n")
     print(f"\nWelcome {name} to the Ultimate Battleship game!")
-    print("---------------------------------------------------------------")
+    
     print("\nThis game is for those who like to play a real quick game,\n\
 you have only one guess to get the location of the ship to try to sink it.")
     print("You need to select row and column from 0 to 4 only.")
@@ -76,10 +77,12 @@ you have only one guess to get the location of the ship to try to sink it.")
     x, y = Game_board.make_guess(object)
     
     if game_board.board[x][y] == "@":
-        print("Hit!")
+        print(f"\nHit! Well done {name}. You won!")
     else:
-        print("Miss!")
-        game_board.print_board()    
+        print(f"\nMiss! Bad luck {name}, hopefully you can get it next time! .")
+        print("You can have a look where the ship was on the board.")
+        game_board.print_board()
+        print("---------------------------------------------------------------")    
 
 
 New_game()
