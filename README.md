@@ -1,9 +1,9 @@
 # [The Ultimate Batthleship Game](https://github.com/MichalPokojny/MyProject3-TheBattleshipGame)
 
-The Ultimate Battleship game is a python game which is deployed at Code Institute mock terminal on Heroku.<br>
-This game was originally created as a part of the 3rd project in "Full Stack Software Developer" course at Code Institute.
+The Ultimate Battleship game is a python game that is deployed at Code Institute mock terminal on Heroku.<br>
+This game was created as a part of the 3rd project in the "Full Stack Software Developer" course at Code Institute.
 
-This short battleship game, is made of getting 3 guesses from the user to try to get the location of the ship.
+This short battleship game is made of getting 3 guesses from the user to try to get the location of the ship.
 
 
 <p align="center">
@@ -15,11 +15,12 @@ This short battleship game, is made of getting 3 guesses from the user to try to
 
 ## How to play
 
-[Battleship](https://en.wikipedia.org/wiki/Battleship_(game)) game is a well known classic pen and paper game, where user has to find the location of the enemy ships.
-- This game is set on 5x5 playing field.
+[Battleship](https://en.wikipedia.org/wiki/Battleship_(game)) 
+ game is a well-known classic pen and paper game, where the users has to find the location of the enemy ships.
+- This game is set on a 5x5 playing field.
 - Users have only 3 guesses to try to locate only 1 ship in this version.
-- If users ran out of the tries than it is a game over, if he manage to find it in 3 guesses then it's a Win!
-- Users enter their name at the beginning, then typing in number from 0 - 4 for row and column.
+- If the users ran out of tries then it is a game over, if he manages to find it in 3 guesses then it's a Win!
+- Users enter their name at the beginning, then type in a number from 0 - 4 for rows and columns.
 - This version of the game won't take the same location number input, users has to type in different number every time.
 
 ## User stories
@@ -36,8 +37,8 @@ This short battleship game, is made of getting 3 guesses from the user to try to
   <img src="docs/user-name.png">
 </p> 
 
-- At the beggining of this game, users are asked for the name prompt to terminal.
-- Then the users name are used to welcome section, and later for the results of the game.
+- At the beginning of this game, users are asked for the name prompt to the terminal.
+- Then the user's name is used for to welcome section, and later for the results of the game.
 
 **Welcome and instruction section of the game**
 
@@ -45,31 +46,32 @@ This short battleship game, is made of getting 3 guesses from the user to try to
   <img src="docs/welcome.png">
 </p> 
 
-- At this section, there is a welcome sign with prompted user name.
-- This section also include a quick instructions of game rules. 
+- In this section, there is a welcome sign with a prompted user name.
+- This section also includes quick instructions on game rules. 
 
 **Game section**
 
-- At this section after user type in the number for row and column, print of hitting or missing the target.
-- If users miss the location, print of text saying that target is missed is shown together with tries that user has left to hit the target.
-- Game ask users if they want to continue or finish the game and start again. 
+- In this section after the user type in the number for row and column, print of hitting or missing the target.
+- If users miss the location, a print of text saying that the target is missed is shown together with tries that the user has left to hit the target.
+- The game ask users if they want to continue or finish the game and start again. 
 
 <p align="center">
   <img src="docs/missed.png">
 </p>
 
-- If users hit the target, print of text saying that target has been hit. Short text of saying well done to user name that has been prompted at the beginning.
+- If users hit the target, print text saying that the target has been hit. Short text saying well done to the user name that has been prompted at the beginning.
 - The board of the game with the random set location of the ship as '@' is also printed.
-- After game is finished, prompt from users to press any key is to continue is needed to play the game again.
+- After the game is finished, a prompt from users to press any key to continue is needed to play the game again.
+
 
 <p align="center">
   <img src="docs/game-win.png">
 </p> 
 
-- If users miss the target 3 times, text of game over is printed.
-- Game wish better luck next time to user name that has been prompted.
-- The board of the game is printed with the set random location of the ship as '@', and user guessed locations as 'X'.
-- After game is finished, prompt from users to press any key is to continue is needed to play the game again.
+- If users miss the target 3 times, the text of the game over is printed.
+- Game wishes better luck next time to the user name that has been prompted.
+- The board of the game is printed with the set random location of the ship as '@', and user-guessed locations as 'X'.
+- After the game is finished, a prompt from users to press any key to continue is needed to play the game again.
 
 <p align="center">
   <img src="docs/game-lost.png">
@@ -77,20 +79,20 @@ This short battleship game, is made of getting 3 guesses from the user to try to
 
 **Error handling testing**
 
-- If users type in number that is not between 0 - 4, then message of incorrect input is shown.
+- If users type in a number that is not between 0 - 4, then a message of incorrect input is shown.
 
 <p align="center">
   <img src="docs/incorrect-number.png">
 </p>
 
-- If user not type in any number, then message of incorrect input is shown.
+- If the user does not type in any number, then a message of incorrect input is shown.
 
 <p align="center">
   <img src="docs/incorrect-input-none.png">
 </p>
 
-- If user type in same row and column number, then message of same input location number has been prompt.
-- Game asks users to type in different numbers.
+- If the user type in the same row and column number, then a message of the same input location number has been prompted.
+- The game asks users to type in different numbers.
 
 <p align="center">
   <img src="docs/same-location.png">
@@ -99,8 +101,8 @@ This short battleship game, is made of getting 3 guesses from the user to try to
 
 ## Future features
 
-- Add option to switch to game of 2 players, playing against each other.
-- Add option to swith to game with more ships, player would have 10 tries to sink them all.
+- Add the option to switch to a game of 2 players, playing against each other.
+- Add the option to switch to a game with more ships, the player would have 10 tries to sink them all.
 
 
 ## Flow Chart
@@ -108,9 +110,9 @@ This short battleship game, is made of getting 3 guesses from the user to try to
 
 ## Data Model
 
-- I've used Game board class as my model.
-- The class Game board stores board size, number of ships. Size of the board can be changed as well as number of ships.
-- The game class also has methods stored for adding ship,populating the game board with random ship location, guessing the location and printing the board to user.
+- I've used the Game board class as my model.
+- The class Game board stores board size, and the number of ships. The size of the board can be changed as well as the number of ships.
+- The game class also has methods stored for adding ships, populating the game board with random ship locations, guessing the location, and printing the board to the user.
 
 ## Technologies used
 
@@ -122,9 +124,9 @@ This short battleship game, is made of getting 3 guesses from the user to try to
 
 ## Testing
 
-I have mannually tested this project by doing the following:
+I have manually tested this project by doing the following:
 
-- Passed the code through pycodecode extension in my workspace. No errors in my code found.
+- Passed the code through pycodecode extension in my workspace. No errors in my code were found.
 - Given invalid inputs: strings, number out of range, no input at all.
 - Tested in my local terminal and at the Code Institute Heroku terminal.
 
@@ -134,8 +136,8 @@ I have mannually tested this project by doing the following:
 
 **Validator testing**
 
-- Pycodecode extension in gidpod workspace.
-  - No error were returned from my written code.
+- Pycodecode extension in gitpod workspace.
+  - No errors were returned from my written code.
 
 
 **Unfixed bugs**
@@ -148,21 +150,21 @@ No unfixed bugs
 **User Name Input**
 
 - Expected
--- Feature is expected to get user name prompt and then print welcome message with prompted user name.
+-- Feature is expected to get a user name prompt and then print a welcome message with the prompted user name.
 
 <p align="center">
   <img src="docs/user-name.png">
 </p>
 
 - Testing
--- Tested the feature to input my name into terminal.
+-- Tested the feature to input my name into the terminal.
 
 <p align="center">
   <img src="docs/user-name-insert.png">
 </p>
 
 - Result 
--- Feature responed as expected. Printing the welcome message with my name.
+-- Feature responded as expected. Printing the welcome message with my name.
 
 <p align="center">
   <img src="docs/welcome.png">
@@ -171,21 +173,21 @@ No unfixed bugs
 **Input numbers to guess the location**
 
 - Expected
--- Feature is expected to get number for row and colum from users to try to get the location of the ship.
+-- Feature is expected to get the number for row and column from users to try to get the location of the ship.
 
 <p align="center">
   <img src="docs/number-input.png">
 </p>
 
 - Testing
--- Tested the feature to input number for row and column.
+-- Tested the feature to input numbers for rows and columns.
 
 <p align="center">
   <img src="docs/number-input-insert.png">
 </p>
 
 - Result 
--- Feature responed as expected. Printing message Hit or Miss.
+-- Feature responded as expected. Printing message Hit or Miss.
 
 <p align="center">
   <img src="docs/number-input-insert-message.png">
@@ -203,33 +205,34 @@ No unfixed bugs
 
   The live link can be found here - https://github.com/MichalPokojny/MyProject3-TheBattleshipGame
 
-  - The site can be also deployed on GitPod. The steps to deploy are as follows:
-   - In the gitpod workspace go to MyProject1 click on the index.html
-   - Once opened, in the terminal type: python3 -m http.server
-   - Local link will appear in the terminal, click on it and the webpage will open in a new tab.
+  - The game can be also deployed on GitPod. The steps to deploy are as follows:
+   - In the gitpod workspace go to MyProject3 The Battleship Game and click on the run.py
+   - Once opened, in the terminal type: python3 -m run.py
+   - Game will start in terminal
 
-- To Fork this repositary:
+- To Fork this repository:
 
-  - Navigate to GitHub project repositary [My Project3 The Ultimate Battleship Game](https://github.com/MichalPokojny/MyProject3-TheBattleshipGame)
-  - In the right hand corner see the "Fork" section and click on it.
+  - Navigate to GitHub project repository [My Project3 The Ultimate Battleship Game](https://github.com/MichalPokojny/MyProject3-TheBattleshipGame)
+  - In the right-hand corner see the "Fork" section and click on it.
   - Select an owner for the forked repository.
   - Click Create fork button.
 
 - Heroku deployment:
 
-  - Fork or clone this repositary.
-  - Create new Heroku app.
-  - Set confing var key "PORT" to 8000 value.
-  - Set the buildbacks to Python and NodeJS in that order.
+  - Fork or clone this repository.
+  - Create a new Heroku app.
+  - Set config var key "PORT" to 8000 value.
+  - Set the build backs to Python and NodeJS in that order.
   - Link the Heroku app to the repository.
   - Click on Deploy.
+
   
 
 ## Credits
 
-- Inspiration and some of the code of this game were taken from the [Love-sandwiches](https://github.com/AJGreaves/love-sandwiches) and ULTIMATE battheship game project at Code Institute.
+- Inspiration and some of the code of this game were taken from the [Love-sandwiches](https://github.com/AJGreaves/love-sandwiches) and ULTIMATE battleship game project at Code Institute.
 - Slack community for support on resolving issues.
-- [TechWithTim YouTube channel](https://www.youtube.com/c/TechWithTim) for better understanding object oriented programming to develop my project.
+- [TechWithTim YouTube channel](https://www.youtube.com/c/TechWithTim) for better understanding object-oriented programming to develop my project.
 
 
 ## Acknowledgements
