@@ -84,11 +84,15 @@ def New_game():
         if game_board.board[x][y] == "@":
             print(f"\nHit! Well done {name}. You won!")
             game_board.print_board()
-            break
+            input("\nPress any key to continue")
+            print(
+                    "--------------------------------------------------------\
+-----")
+            New_game()
 
         else:
             if game_board.board[x][y] == "X":
-                print("Guessed that one already, try different one!")
+                print("\nGuessed that one already, try different location!")
                 print(
                     "--------------------------------------------------------\
 -----"
@@ -101,6 +105,7 @@ def New_game():
                 print("Hopefully you can get it next time!")
                 print("Have a look where the ship was located!")
                 game_board.print_board()
+                input("\nPress any key to continue")
                 print(
                     "--------------------------------------------------------\
 -----"
