@@ -33,7 +33,7 @@ This short battleship game, is made of getting 3 guesses from the user to try to
 **User Name**
 
 <p align="center">
-  <img src="docs/user_name.png">
+  <img src="docs/user-name.png">
 </p> 
 
 - At the beggining of this game, users are asked for the name prompt to terminal.
@@ -75,7 +75,7 @@ This short battleship game, is made of getting 3 guesses from the user to try to
   <img src="docs/game-lost.png">
 </p> 
 
-**Error handling**
+**Error handling testing**
 
 - If users type in number that is not between 0 - 4, then message of incorrect input is shown.
 
@@ -110,7 +110,7 @@ This short battleship game, is made of getting 3 guesses from the user to try to
 
 - I've used Game board class as my model.
 - The class Game board stores board size, number of ships. Size of the board can be changed as well as number of ships.
-- The game also has stored methods to add ship, guessing the location and printing the board to user.
+- The game class also has methods stored for adding ship,populating the game board with random ship location, guessing the location and printing the board to user.
 
 ## Technologies used
 
@@ -145,32 +145,51 @@ No unfixed bugs
 
 ## Testing user stories
 
-**Game**
+**User Name Input**
 
 - Expected
--- Feature is expected to 
+-- Feature is expected to get user name prompt and then print welcome message with prompted user name.
 
-
+<p align="center">
+  <img src="docs/user-name.png">
+</p>
 
 - Testing
--- 
+-- Tested the feature to input my name into terminal.
+
+<p align="center">
+  <img src="docs/user-name-insert.png">
+</p>
 
 - Result 
--- 
+-- Feature responed as expected. Printing the welcome message with my name.
 
+<p align="center">
+  <img src="docs/welcome.png">
+</p>
 
-****
+**Input numbers to guess the location**
 
 - Expected
--- 
+-- Feature is expected to get number for row and colum from users to try to get the location of the ship.
 
+<p align="center">
+  <img src="docs/number-input.png">
+</p>
 
 - Testing
--- 
+-- Tested the feature to input number for row and column.
+
+<p align="center">
+  <img src="docs/number-input-insert.png">
+</p>
 
 - Result 
--- 
+-- Feature responed as expected. Printing message Hit or Miss.
 
+<p align="center">
+  <img src="docs/number-input-insert-message.png">
+</p>
 
 ## Deployment
 
