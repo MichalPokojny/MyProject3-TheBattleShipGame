@@ -50,7 +50,7 @@ class Game_board:
 
             y = input("Enter column number which you want to target:")
             while y not in "01234" or y == "":
-                print("Not a valid input for a column, please choose again.")
+                print("Not valid input for a column, please choose again.")
                 y = input("Enter column number which you want to target:")
 
             return int(x), int(y)

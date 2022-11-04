@@ -12,6 +12,7 @@ This short battleship game, is made of getting 3 guesses from the user to try to
 
 [Live version of my project](https://the-battleship-game.herokuapp.com/)
 
+
 ## How to play
 
 [Battleship](https://en.wikipedia.org/wiki/Battleship_(game)) game is a well known classic pen and paper game, where user has to find the location of the enemy ships.
@@ -85,7 +86,7 @@ This short battleship game, is made of getting 3 guesses from the user to try to
 - If user not type in any number, then message of incorrect input is shown.
 
 <p align="center">
-  <img src="docs/incorrect-number.png">
+  <img src="docs/incorrect-input-none.png">
 </p>
 
 - If user type in same row and column number, then message of same input location number has been prompt.
@@ -95,20 +96,37 @@ This short battleship game, is made of getting 3 guesses from the user to try to
   <img src="docs/same-location.png">
 </p>
 
+
 ## Future features
 
+- Add option to switch to game of 2 players, playing against each other.
+- Add option to swith to game with more ships, player would have 10 tries to sink them all.
 
 
 ## Flow Chart
 
 
+## Data Model
+
+- I've used Game board class as my model.
+- The class Game board stores board size, number of ships. Size of the board can be changed as well as number of ships.
+- The game also has stored methods to add ship, guessing the location and printing the board to user.
 
 ## Technologies used
 
+- GitPod - Workspace of the project.
+- GitHub - Hosting the repository.
+- Heroku - Hosting the mock terminal of the game.
+- Grammarly - Grammar check of all the text on the website and readme file.
+- Lucid - Flow chart planning of the code.
 
 ## Testing
 
+I have mannually tested this project by doing the following:
 
+- Passed the code through pycodecode extension in my workspace. No errors in my code found.
+- Given invalid inputs: strings, number out of range, no input at all.
+- Tested in my local terminal and at the Code Institute Heroku terminal.
 
 **Bugs**
 
@@ -116,19 +134,18 @@ This short battleship game, is made of getting 3 guesses from the user to try to
 
 **Validator testing**
 
-- HTML 
--- No errors were returned when passing through the official W3C validator.
-- CSS
--- No errors were found when passing through the official validator.
+- Pycodecode extension in gidpod workspace.
+  - No error were returned from my written code.
 
 
 **Unfixed bugs**
 
 No unfixed bugs
 
+
 ## Testing user stories
 
-****
+**Game**
 
 - Expected
 -- Feature is expected to 
@@ -155,16 +172,17 @@ No unfixed bugs
 -- 
 
 
-
 ## Deployment
 
-- The site was deployed to GitHub pages. The steps to deploy are as follows:
+- The site was deployed to GitHub pages and Heroku using Code Institute mock terminal. The steps to deploy are as follows:
+
+- GitHub repository:
 
   - In the GitHub repository, navigate to the Settings tab
   - From the source section drop-down menu, select the Master Branch
   - Once the Master Branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-  The live link can be found here - https://michalpokojny.github.io/MyProject2/
+  The live link can be found here - https://github.com/MichalPokojny/MyProject3-TheBattleshipGame
 
   - The site can be also deployed on GitPod. The steps to deploy are as follows:
    - In the gitpod workspace go to MyProject1 click on the index.html
@@ -173,25 +191,29 @@ No unfixed bugs
 
 - To Fork this repositary:
 
-  - Navigate to GitHub project repositary [Rock Paper Scissors Lizard Spock](https://michalpokojny.github.io/MyProject2-RockPaperScissorsLizardSpock/)
+  - Navigate to GitHub project repositary [My Project3 The Ultimate Battleship Game](https://github.com/MichalPokojny/MyProject3-TheBattleshipGame)
   - In the right hand corner see the "Fork" section and click on it.
   - Select an owner for the forked repository.
   - Click Create fork button.
 
+- Heroku deployment:
+
+  - Fork or clone this repositary.
+  - Create new Heroku app.
+  - Set confing var key "PORT" to 8000 value.
+  - Set the buildbacks to Python and NodeJS in that order.
+  - Link the Heroku app to the repository.
+  - Click on Deploy.
+  
 
 ## Credits
 
+- Inspiration and some of the code of this game were taken from the [Love-sandwiches](https://github.com/AJGreaves/love-sandwiches) and ULTIMATE battheship game project at Code Institute.
+- Slack community for support on resolving issues.
+- [TechWithTim YouTube channel](https://www.youtube.com/c/TechWithTim) for better understanding object oriented programming to develop my project.
 
-**Content**
-
-
-
-**Media**
-
-- 
 
 ## Acknowledgements
 
-
 - First I would like to thank my partner Jane for her continuous support and for helping me with grammar checks and correct wording.
-- I would like to also thank my mentor [Rohit Sharma](https://github.com/rohit0286) for the support in deploying my second project.
+- I would like to also thank my mentor [Rohit Sharma](https://github.com/rohit0286) for the support in deploying my third project.
