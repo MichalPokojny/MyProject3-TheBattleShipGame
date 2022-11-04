@@ -95,7 +95,7 @@ def new_game():
         if game_board.board[x][y] == "@":
             print(f"\nHit! Well done {name}. You won!")
             game_board.print_board()
-            input("\nPress any key to continue")
+            input("\nPress any key to restart the game.")
             print("--------------------------------------------------------\
 -----")
             new_game()
@@ -113,7 +113,7 @@ def new_game():
                 print("Hopefully you can get it next time!")
                 print("Have a look where the ship was located!")
                 game_board.print_board()
-                input("\nPress any key to continue")
+                input("\nPress any key to restart the game.")
                 print("--------------------------------------------------------\
 -----")
                 new_game()
@@ -121,9 +121,9 @@ def new_game():
             print(f"You have {tries} tries left.")
             ask_to_continue = input(
                 "Continue? If yes, press any key.If not, \
-type n: ").lower()
+type n to close the game: ").lower()
             if ask_to_continue == "n":
-                new_game()
+                break
         print("------------------------------------------------------------")
 
 
