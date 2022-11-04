@@ -80,7 +80,13 @@ This short battleship game, is made of getting 3 guesses from the user to try to
 
 <p align="center">
   <img src="docs/incorrect-number.png">
-</p> 
+</p>
+
+- If user not type in any number, then message of incorrect input is shown.
+
+<p align="center">
+  <img src="docs/incorrect-number.png">
+</p>
 
 - If user type in same row and column number, then message of same input location number has been prompt.
 - Game asks users to type in different numbers.
