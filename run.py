@@ -26,7 +26,7 @@ class Game_board:
     def print_board(self):
         # Function to print the board with location of the ship
 
-        print("    0 1 2 3 4")
+        print("     0 1 2 3 4")
         row_number = 0
         for row in self.board:
             print("  ", row_number, " ".join(row))
@@ -69,12 +69,10 @@ you have only 3 guesses to get the location of the ship to try to sink it.")
 
     size = 5
     num_ships = 1
-
+    tries = 3
     game_board = Game_board(size, num_ships)    
-    
     game_board.populate_board(size, num_ships)
     
-    tries = 3
     while True:
 
         x, y = Game_board.make_guess(object)
@@ -87,20 +85,21 @@ you have only 3 guesses to get the location of the ship to try to sink it.")
             if game_board.board[x][y] == "X":
                 print("Guessed that one already, try different one!")
                 continue
-            print("Miss! Try again!")
-            game_board.board[x][y] = "X"
-            tries = tries - 1
-            print(f"You have {tries} tries left.")
-            ask_to_continue = input("Continue? If yes, press any key.If not, type n").lower()
-            if ask_to_continue == "n":
-                break
-            elif tries == 0:
-                print("Sorry you lost")
-                print(f"\nMiss! Bad luck {name}, hopefully you can get it next time!")
+            tries -= 1
+            
+            if tries == 0:
+                print(f"\nSorry you lost {name}.")
+                print("Hopefully you can get it next time!")
                 print("Have a look where the ship was located!")
                 game_board.print_board()
                 New_game()
-
+            print("Miss! Try again!")
+            game_board.board[x][y] = "X"
+            print(f"You have {tries} tries left.")    
+            ask_to_continue = input("Continue? If yes, press any key.If not, \
+type n: ").lower()
+            if ask_to_continue == "n":
+                New_game()
         print("-------------------------------------------------------------")
     
 
