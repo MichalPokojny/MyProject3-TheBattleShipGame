@@ -30,10 +30,10 @@ class Game_board:
     def print_board(self):
         # Function to print the board with location of the ship
 
-        print("     0 1 2 3 4")
+        print("           0 1 2 3 4")
         row_number = 0
         for row in self.board:
-            print("  ", row_number, " ".join(row))
+            print("        ", row_number, " ".join(row))
             row_number += 1
 
     def make_guess(self):
