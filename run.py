@@ -68,6 +68,11 @@ def new_game():
     Main function to play the game
     """
     name = input("Hi! What's your name?\n")
+    if name.isalpha() is True:
+        pass
+    else:
+        print("Incorect input. Please try again.")
+        name = input("What's your name?\n")    
 
     print("------------------------------------------------------------")
     print("------------------------------------------------------------")
