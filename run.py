@@ -17,7 +17,7 @@ class Game_board:
         """
         self.size = size
         self.num_ships = num_ships
-        self.board = [["." for x in range(size)] for y in range(size)]
+        self.board = [['.' for x in range(size)] for y in range(size)]
 
     def populate_board(self, size, num_ships):
         """
@@ -48,12 +48,12 @@ class Game_board:
         """
         try:
             x = input("Enter row number which you want to target:")
-            while x not in "01234" or x == "":
+            while x not in '01234' or x == '':
                 print("Not valid input for a row, please choose again.\n")
                 x = input("Enter row number which you want to target:")
 
             y = input("Enter column number which you want to target:")
-            while y not in "01234" or y == "":
+            while y not in '01234' or y == '':
                 print("Not valid input for a column, please choose again.")
                 y = input("Enter column number which you want to target:")
 
@@ -92,37 +92,37 @@ def new_game():
 
         x, y = Game_board.make_guess(object)
 
-        if game_board.board[x][y] == "@":
+        if game_board.board[x][y] == '@':
             print(f"\nHit! Well done {name}. You won!")
             game_board.print_board()
-            input("\nPress any key to restart the game.")
+            input("\nPress enter to restart the game.")
             print("--------------------------------------------------------\
 -----")
             new_game()
 
         else:
-            if game_board.board[x][y] == "X":
+            if game_board.board[x][y] == 'X':
                 print("\nGuessed that one already, try different location!")
                 print("-------------------------------------------------------\
 -----")
                 continue
             tries -= 1
-            game_board.board[x][y] = "X"
+            game_board.board[x][y] = 'X'
             if tries == 0:
                 print(f"\nSorry you lost {name}.")
                 print("Hopefully you can get it next time!")
                 print("Have a look where the ship was located!")
                 game_board.print_board()
-                input("\nPress any key to restart the game.")
+                input("\nPress enter to restart the game.")
                 print("--------------------------------------------------------\
 -----")
                 new_game()
             print("Miss! Try again!")
             print(f"You have {tries} tries left.")
             ask_to_continue = input(
-                "Continue? If yes, press any key.If not, \
-type n to close the game: ").lower()
-            if ask_to_continue == "n":
+                "Continue? If yes, press enter.If not, \
+type n and then hit the enter to close the game: ").lower()
+            if ask_to_continue == 'n':
                 break
         print("------------------------------------------------------------")
 
