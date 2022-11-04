@@ -45,12 +45,12 @@ class Game_board:
         try:
             x = input("Enter row number which you want to target.")
             while x not in "01234" or x == "":
-                print("Not valid number for a row, please choose again.\n")
+                print("Not valid input for a row, please choose again.\n")
                 x = input("Enter row number which you want to target.")
 
             y = input("Enter column number which you want to target.")
             while y not in "01234" or y == "":
-                print("Not a valid number for a column, please choose again.")
+                print("Not a valid input for a column, please choose again.")
                 y = input("Enter column number which you want to target.")
 
             return int(x), int(y)
