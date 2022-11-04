@@ -20,17 +20,21 @@ class Game_board:
         self.board = [["." for x in range(size)] for y in range(size)]
 
     def populate_board(self, size, num_ships):
-        # Function to populate the board with random locations.
+        """
+        Function to populate the board with random locations.
+        """
         for i in range(num_ships):
             self.x, self.y = randint(0, size - 1), randint(0, size - 1)
-            self.board[self.x][self.y] = "@"
+            self.board[self.x][self.y] = '@'
 
             return self.board[self.x][self.y]
 
     def print_board(self):
-        # Function to print the board with location of the ship
+        """
+        Function to print the board with location of the ship
+        """
 
-        print("           0 1 2 3 4")
+        print('           0 1 2 3 4')
         row_number = 0
         for row in self.board:
             print("        ", row_number, " ".join(row))
@@ -59,8 +63,10 @@ class Game_board:
             return self.make_guess()
 
 
-def New_game():
-    # Main function to play the game
+def new_game():
+    """
+    Main function to play the game
+    """
     name = input("Hi! What's your name?\n")
 
     print("------------------------------------------------------------")
@@ -85,18 +91,15 @@ def New_game():
             print(f"\nHit! Well done {name}. You won!")
             game_board.print_board()
             input("\nPress any key to continue")
-            print(
-                    "--------------------------------------------------------\
+            print("--------------------------------------------------------\
 -----")
-            New_game()
+            new_game()
 
         else:
             if game_board.board[x][y] == "X":
                 print("\nGuessed that one already, try different location!")
-                print(
-                    "-------------------------------------------------------\
------"
-                )
+                print("-------------------------------------------------------\
+-----")
                 continue
             tries -= 1
             game_board.board[x][y] = "X"
@@ -106,20 +109,17 @@ def New_game():
                 print("Have a look where the ship was located!")
                 game_board.print_board()
                 input("\nPress any key to continue")
-                print(
-                    "--------------------------------------------------------\
------"
-                )
-                New_game()
+                print("--------------------------------------------------------\
+-----")
+                new_game()
             print("Miss! Try again!")
             print(f"You have {tries} tries left.")
             ask_to_continue = input(
                 "Continue? If yes, press any key.If not, \
-type n: "
-            ).lower()
+type n: ").lower()
             if ask_to_continue == "n":
-                New_game()
+                new_game()
         print("------------------------------------------------------------")
 
 
-New_game()
+new_game()
