@@ -1,3 +1,6 @@
+"""
+The Battleship Game
+"""
 from random import randint
 
 
@@ -72,7 +75,7 @@ def new_game():
         pass
     else:
         print("Incorect input. Please try again.")
-        name = input("What's your name?\n")    
+        name = input("What's your name?\n")
 
     print("------------------------------------------------------------")
     print("------------------------------------------------------------")
@@ -90,9 +93,9 @@ def new_game():
     game_board.populate_board(size, num_ships)
     while True:
 
-        x, y = Game_board.make_guess(object)
+        num_x, num_y = Game_board.make_guess(object)
 
-        if game_board.board[x][y] == '@':
+        if game_board.board[num_x][num_y] == '@':
             print(f"\nHit! Well done {name}. You won!")
             game_board.print_board()
             input("\nPress enter to restart the game.")
@@ -101,13 +104,13 @@ def new_game():
             new_game()
 
         else:
-            if game_board.board[x][y] == 'X':
+            if game_board.board[num_x][num_y] == 'X':
                 print("\nGuessed that one already, try different location!")
                 print("-------------------------------------------------------\
 -----")
                 continue
             tries -= 1
-            game_board.board[x][y] = 'X'
+            game_board.board[num_x][num_y] = 'X'
             if tries == 0:
                 print(f"\nSorry you lost {name}.")
                 print("Hopefully you can get it next time!")
@@ -124,6 +127,8 @@ def new_game():
 type n and then hit the enter to close the game: ").lower()
             if ask_to_continue == 'n':
                 break
+            else:
+                pass
         print("------------------------------------------------------------")
 
 
