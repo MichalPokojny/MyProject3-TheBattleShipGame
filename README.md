@@ -51,24 +51,43 @@ This short battleship game, is made of getting 3 guesses from the user to try to
 
 - At this section after user type in the number for row and column, print of hitting or missing the target.
 - If users miss the location, print of text saying that target is missed is shown together with tries that user has left to hit the target.
+- Game ask users if they want to continue or finish the game and start again. 
 
 <p align="center">
   <img src="docs/missed.png">
 </p>
 
 - If users hit the target, print of text saying that target has been hit. Short text of saying well done to user name that has been prompted at the beginning.
-- The board of the game with the random set location of the ship is also printed.
-- After game is finished, prompt from user to press any key is to continue playing game again.
+- The board of the game with the random set location of the ship as '@' is also printed.
+- After game is finished, prompt from users to press any key is to continue is needed to play the game again.
 
 <p align="center">
   <img src="docs/game-win.png">
 </p> 
 
+- If users miss the target 3 times, text of game over is printed.
+- Game wish better luck next time to user name that has been prompted.
+- The board of the game is printed with the set random location of the ship as '@', and user guessed locations as 'X'.
+- After game is finished, prompt from users to press any key is to continue is needed to play the game again.
 
+<p align="center">
+  <img src="docs/game-lost.png">
+</p> 
 
-**End of the game**
+**Error handling**
 
+- If users type in number that is not between 0 - 4, then message of incorrect input is shown.
 
+<p align="center">
+  <img src="docs/incorrect-number.png">
+</p> 
+
+- If user type in same row and column number, then message of same input location number has been prompt.
+- Game asks users to type in different numbers.
+
+<p align="center">
+  <img src="docs/same-location.png">
+</p>
 
 ## Future features
 

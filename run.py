@@ -94,7 +94,7 @@ def New_game():
             if game_board.board[x][y] == "X":
                 print("\nGuessed that one already, try different location!")
                 print(
-                    "--------------------------------------------------------\
+                    "-------------------------------------------------------\
 -----"
                 )
                 continue
