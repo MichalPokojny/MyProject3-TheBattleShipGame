@@ -4,7 +4,12 @@ from random import randint
 class Game_board:
     """
     Main class game
+    Class contain size and num of the ships.
+    Function for populating board with random locations.
+    Function for printing the board with selected locations.
+    Function for asking the location from user.
     """
+    
     def __init__(self, size, num_ships):
         """
         Set attribute for size and number of ships.
@@ -57,15 +62,16 @@ class Game_board:
 
 def New_game():
     # Main function to play the game
-    print("---------------------------------------------------------------")
     name = input("Hi! What's your name?\n")
-    print(f"\nWelcome {name} to the Ultimate Battleship game!")
-    
-    print("\nThis game is for those who like to play a real quick game,\n\
-you have only 3 guesses to get the location of the ship to try to sink it.")
-    print("You need to select row and column from 0 to 4 only.")
-    print("Good luck!\n")
-    print("---------------------------------------------------------------")
+
+    print("------------------------------------------------------------")
+    print("------------------------------------------------------------")
+    print(f"\n   Welcome {name} to the Ultimate Battleship game!")
+    print("\n   You have 3 guesses to try to find and destroy enemy ship!")
+    print("   You need to select row and column from 0 to 4 only.")
+    print("   Good luck!\n")
+    print("------------------------------------------------------------")
+    print("------------------------------------------------------------")
 
     size = 5
     num_ships = 1
@@ -79,6 +85,7 @@ you have only 3 guesses to get the location of the ship to try to sink it.")
 
         if game_board.board[x][y] == "@":
             print(f"\nHit! Well done {name}. You won!")
+            game_board.print_board()
             break
 
         else:
@@ -86,15 +93,16 @@ you have only 3 guesses to get the location of the ship to try to sink it.")
                 print("Guessed that one already, try different one!")
                 continue
             tries -= 1
-            
+            game_board.board[x][y] = "X"
             if tries == 0:
                 print(f"\nSorry you lost {name}.")
                 print("Hopefully you can get it next time!")
                 print("Have a look where the ship was located!")
                 game_board.print_board()
+                print("--------------------------------------------------------\
+-----")
                 New_game()
             print("Miss! Try again!")
-            game_board.board[x][y] = "X"
             print(f"You have {tries} tries left.")    
             ask_to_continue = input("Continue? If yes, press any key.If not, \
 type n: ").lower()
