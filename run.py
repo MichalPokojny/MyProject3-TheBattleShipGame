@@ -132,4 +132,5 @@ type n and then press enter to close the game: ").lower()
         new_game()
 
 
-new_game()
+if __name__ == "__main__":
+    new_game()
