@@ -72,64 +72,64 @@ def new_game():
     """
     name = input("Hi! What's your name?\n")
     if name.isalpha() is True:
-        pass
-    else:
-        print("Incorect input. Please try again.")
-        name = input("What's your name?\n")
+        print("------------------------------------------------------------")
+        print("------------------------------------------------------------")
+        print(f"\n   Welcome {name} to the Ultimate Battleship game!")
+        print("\n   You have 3 guesses to try to find and destroy enemy ship!")
+        print("   You need to select row and column from 0 to 4 only.")
+        print("   Good luck!\n")
+        print("------------------------------------------------------------")
+        print("------------------------------------------------------------")
 
-    print("------------------------------------------------------------")
-    print("------------------------------------------------------------")
-    print(f"\n   Welcome {name} to the Ultimate Battleship game!")
-    print("\n   You have 3 guesses to try to find and destroy enemy ship!")
-    print("   You need to select row and column from 0 to 4 only.")
-    print("   Good luck!\n")
-    print("------------------------------------------------------------")
-    print("------------------------------------------------------------")
+        size = 5
+        num_ships = 1
+        tries = 2
+        game_board = Game_board(size, num_ships)
+        game_board.populate_board(size, num_ships)
+        while True:
 
-    size = 5
-    num_ships = 1
-    tries = 3
-    game_board = Game_board(size, num_ships)
-    game_board.populate_board(size, num_ships)
-    while True:
-
-        num_x, num_y = Game_board.make_guess(object)
-
-        if game_board.board[num_x][num_y] == '@':
-            print(f"\nHit! Well done {name}. You won!")
-            game_board.print_board()
-            input("\nPress enter to restart the game.")
-            print("--------------------------------------------------------\
------")
-            new_game()
-
-        else:
-            if game_board.board[num_x][num_y] == 'X':
-                print("\nGuessed that one already, try different location!")
-                print("-------------------------------------------------------\
------")
-                continue
-            tries -= 1
-            game_board.board[num_x][num_y] = 'X'
-            if tries == 0:
-                print(f"\nSorry you lost {name}.")
-                print("Hopefully you can get it next time!")
-                print("Have a look where the ship was located!")
+            num_x, num_y = Game_board.make_guess(object)
+            if game_board.board[num_x][num_y] == '@':
+                print(f"\nHit! Well done {name}. You won!")
                 game_board.print_board()
-                input("\nPress enter to restart the game.")
+                input("\nPress enter to close the game.")
+                return False
                 print("--------------------------------------------------------\
 -----")
                 new_game()
-            print("Miss! Try again!")
-            print(f"You have {tries} tries left.")
-            ask_to_continue = input(
-                "Continue? If yes, press enter.If not, \
-type n and then hit the enter to close the game: ").lower()
-            if ask_to_continue == 'n':
-                break
             else:
-                pass
-        print("------------------------------------------------------------")
+                if game_board.board[num_x][num_y] == 'X':
+                    print("\nGuessed that one already, try different location!\
+                        ")
+                    print("-------------------------------------------------------\
+-----")
+                    continue
+                else:
+                    if tries == 0:
+                        print(f"\nSorry you lost {name}.")
+                        print("Hopefully you can get it next time!")
+                        print("Have a look where the ship was located!")
+                        game_board.print_board()
+                        input("\nPress enter to close the game.")
+                        return False
+                        print("--------------------------------------------------------\
+-----")
+                        new_game()
+                    game_board.board[num_x][num_y] = 'X'
+                    print("Miss! Try again!")
+                    print(f"You have {tries} tries left.")
+                    ask_to_continue = input(
+                        "Continue? If yes, press enter.If not, \
+type n and then press enter to close the game: ").lower()
+                    if ask_to_continue != 'n':
+                        tries -= 1
+                    else:
+                        break
+                print("-------------------------------------------------------\
+                    -----")
+    else:
+        print("Incorect input. Please try again.")
+        new_game()
 
 
 new_game()
