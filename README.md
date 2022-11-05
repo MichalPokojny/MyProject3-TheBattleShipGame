@@ -106,6 +106,11 @@ This short Battleship game gives users three attempts to get to the location of 
 
 ## Flow Chart
 
+Flow chart of the code
+
+<p align="center">
+  <img src="docs/flow-chart.png">
+</p>
 
 ## Data Model
 
