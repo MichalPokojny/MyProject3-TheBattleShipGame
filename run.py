@@ -75,7 +75,7 @@ def new_game():
         print("------------------------------------------------------------")
         print("------------------------------------------------------------")
         print(f"\n   Welcome {name} to the Ultimate Battleship game!")
-        print("\n   You have 3 guesses to try to find and destroy enemy ship!")
+        print("\n   You have 3 attempts to try to find and destroy enemy ship!")
         print("   You need to select row and column from 0 to 4 only.")
         print("   Good luck!\n")
         print("------------------------------------------------------------")
