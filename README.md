@@ -1,4 +1,4 @@
-# [The Ultimate Batthleship Game](https://github.com/MichalPokojny/MyProject3-TheBattleshipGame)
+# [The Ultimate Battleship Game](https://github.com/MichalPokojny/MyProject3-TheBattleshipGame)
 
 The Ultimate Battleship game is a python game that is deployed at the Code Institute mock terminal on Heroku.<br>
 This game was created as a part of the 3rd project in the "Full Stack Software Developer" course at the Code Institute.
