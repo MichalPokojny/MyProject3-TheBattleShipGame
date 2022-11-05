@@ -119,14 +119,14 @@ def new_game():
                     print("Miss! Try again!")
                     print(f"You have {tries} tries left.")
                     ask_to_continue = input(
-                        "Continue? If yes, press enter.If not, \
+                        "Continue? If yes, press enter.\nIf not, \
 type n and then press enter to close the game: ").lower()
                     if ask_to_continue != 'n':
                         tries -= 1
                     else:
                         break
                 print("-------------------------------------------------------\
-                    -----")
+-----")
     else:
         print("Incorect input. Please try again.")
         new_game()
